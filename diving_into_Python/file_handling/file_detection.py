@@ -1,7 +1,7 @@
 # Importing the os module which contains the path submodule
 import os
 import os.path
-file_path = "trial.txt"
+file_path = "C:\\Users\\Erick Ondiwa'z\\Desktop\\practice.txt"
 print(file_path)
 
 # The .exists() method returns true if the specified file path exists
