@@ -1,38 +1,38 @@
 import random
 
+# while True:
+
+choices = ["rock", "paper", "scissors"]
+
 
 def computer_choice():
-    choices = ["Rock", "Paper", "Scissors"]
     return random.choice(choices)
 
 
 def compute_user_choice():
-    return input("What's your choice,Rock, Paper or Scissors? ")
+    user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
+    if user_choice in choices:
+        return user_choice
+    else:
+        print("Invalid choice please ensure you type in either rock, paper or scissors!")
 
 
 def compute_result(user, computer):
     result = " "
     if user == computer:
         result = "You Tie!"
-
-    elif user == "Rock" and computer == "Paper":                    # 1
+    elif user == "rock" and computer == "paper":  # 1
         result = "You Lose!"
-
-    elif user == "Rock" and computer == "Scissors":                # 2
+    elif user == "rock" and computer == "scissors":  # 2
         result = "You Win!"
-
-    elif user == "Paper" and computer == "Rock":             # 3
+    elif user == "paper" and computer == "rock":  # 3
         result = "You Win!"
-
-    elif user == "Paper" and computer == "Scissors":             # 4
+    elif user == "paper" and computer == "scissors":  # 4
         result = "You Lose!"
-
-    elif user == "Scissors" and computer == "Rock":             # 5
+    elif user == "scissors" and computer == "Rock":  # 5
         result = "You Win!"
-
-    elif user == "Scissors" and computer == "Paper":
+    elif user == "scissors" and computer == "paper":
         result = "You Lose!"
-
     print("You: " + user + ", " + "Computer:" + computer)
     return result
 
@@ -54,7 +54,14 @@ def display_result():
         ties += 1
     else:
         print("This is an invalid result")
-    print("Wins: "+str(wins)+" Losses "+str(losses)+" Ties "+str(ties))
+    print("Wins: " + str(wins) + " Losses " + str(losses) + " Ties " + str(ties))
 
 
 display_result()
+#
+#     user_response = input("Play again? Yes/No: ").lower()
+#     if user_response != "yes":
+#         break
+#     else:
+#
+# print("Goodbyeeee!")
