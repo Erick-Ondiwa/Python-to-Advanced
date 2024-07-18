@@ -1,67 +1,70 @@
 import random
 
-# while True:
 
-choices = ["rock", "paper", "scissors"]
+def play_game():
+    user_choice = None
+    choices = ["rock", "paper", "scissors"]
+    computer = random.choice(choices)
+    while user_choice not in choices:
+        user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
 
-
-def computer_choice():
-    return random.choice(choices)
-
-
-def compute_user_choice():
-    user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
-    if user_choice in choices:
-        return user_choice
-    else:
-        print("Invalid choice please ensure you type in either rock, paper or scissors!")
-
-
-def compute_result(user, computer):
     result = " "
-    if user == computer:
+    if user_choice == computer:
         result = "You Tie!"
-    elif user == "rock" and computer == "paper":  # 1
+    elif user_choice == "rock" and computer == "paper":  # 1
         result = "You Lose!"
-    elif user == "rock" and computer == "scissors":  # 2
+    elif user_choice == "rock" and computer == "scissors":  # 2
         result = "You Win!"
-    elif user == "paper" and computer == "rock":  # 3
+    elif user_choice == "paper" and computer == "rock":  # 3
         result = "You Win!"
-    elif user == "paper" and computer == "scissors":  # 4
+    elif user_choice == "paper" and computer == "scissors":  # 4
         result = "You Lose!"
-    elif user == "scissors" and computer == "Rock":  # 5
+    elif user_choice == "scissors" and computer == "Rock":  # 5
         result = "You Win!"
-    elif user == "scissors" and computer == "paper":
+    elif user_choice == "scissors" and computer == "paper":
         result = "You Lose!"
-    print("You: " + user + ", " + "Computer:" + computer)
+    print("You: " + user_choice + ", " + "Computer:" + computer)
     return result
 
 
-def display_result():
+class Scores:
     wins = 0
     losses = 0
     ties = 0
+    attempts = 0
 
-    comp_choice = computer_choice()
-    user_choice = compute_user_choice()
-    result = compute_result(comp_choice, user_choice)
-    print(result)
-    if result == "You Win!":
-        wins += 1
-    elif result == "You Lose!":
-        losses += 1
-    elif result == "You Tie!":
-        ties += 1
+
+def play_again():
+    user_response = input("Play again? yes/no: ").upper()
+    if user_response == "YES":
+        display_result()
     else:
-        print("This is an invalid result")
-    print("Wins: " + str(wins) + " Losses " + str(losses) + " Ties " + str(ties))
+        print("Goodbyeee")
 
 
-display_result()
-#
-#     user_response = input("Play again? Yes/No: ").lower()
-#     if user_response != "yes":
-#         break
-#     else:
-#
-# print("Goodbyeeee!")
+def display_result():
+    while Scores.attempts <= 2:
+        Scores.attempts += 1
+        result = play_game()
+        print(result)
+        if result == "You Win!":
+            Scores.wins += 1
+        elif result == "You Lose!":
+            Scores.losses += 1
+        elif result == "You Tie!":
+            Scores.ties += 1
+        else:
+            print("This is an invalid result")
+        print("Wins: " + str(Scores.wins) + " Losses " + str(Scores.losses) + " Ties " + str(Scores.ties))
+    print("You've reached a maximum of "+str(Scores.attempts)+" attempts")
+    play_again()
+    return Scores
+
+
+while display_result():
+    play_again()
+print("Goodbyeeee!")
+
+
+
+
