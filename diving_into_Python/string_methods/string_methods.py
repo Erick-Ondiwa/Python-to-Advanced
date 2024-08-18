@@ -23,15 +23,30 @@ print(full_name.find(" "))
 new_name = full_name.replace("@", " ", 2)
 print(new_name)
 
+# count(): This method returns the number of occurrences of a specified char or substring in a
+# string of text
+
+print(new_name.count("i"))
+
 # title(): Changes a string or a specified portion of a string to title case
 print(new_name.title())
 
 letter = "eRiCk"
 print(letter.swapcase())
 
+# center(): This method pads the string with the specified character
+
 # swapcase(): This method swaps the cases of all characters in a string
 print(new_name.swapcase())
-# casefold(): Implements the caseless string matching
+# casefold(): Implements the caseless string matching. This method is similar to the  lower
+# method but stronger as it is thorough in handling special cases and characters from
+# different languages
+
+print(new_name.casefold())
+
+# center():
 # isdigit():
 # isalpha():
-# isalphanum
+# isalnum():
+
+
