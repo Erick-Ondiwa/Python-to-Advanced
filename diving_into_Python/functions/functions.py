@@ -2,13 +2,11 @@
 
 #  program to compute the area volume of a cylinder
 
-#a. A function to compute the cross-section area of a circle
+# A function to compute the cross-section area of a circle
 def compute_circle_area(radius):
     PI = 3.142
 
     return PI * radius * radius
-
-
 # Using the return value above to compute the volume of the cylinder
 def compute_volume():
     HEIGHT: int = 40
