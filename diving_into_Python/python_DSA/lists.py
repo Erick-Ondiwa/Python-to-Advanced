@@ -1,6 +1,7 @@
 # Lists - this is a collection of multiple items in a single variable. The items in a list can
 # either be of the same or different data types
 # A list is like an array in other programming languages
+# There are two categories of lists: Single dimensional and multi-dimensional lists
 fav_foods = ["pizza", "hotdog", "cake"]
 for fav_food in fav_foods:
     print(fav_food, end=" ")
