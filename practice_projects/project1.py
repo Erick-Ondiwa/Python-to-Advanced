@@ -55,8 +55,11 @@ def display_result():
             Scores.ties += 1
         else:
             print("This is an invalid result")
-        print("Wins: " + str(Scores.wins) + " Losses " + str(Scores.losses) + " Ties " + str(Scores.ties))
+        print("Wins: " + str(Scores.wins) + " Losses " + str(Scores.losses) + " Ties " + str(
+            Scores.ties))
+        
     print("You've reached a maximum of "+str(Scores.attempts)+" attempts")
+
     play_again()
     return Scores
 
