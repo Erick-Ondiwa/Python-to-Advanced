@@ -15,6 +15,9 @@ my_dict = {
     "year": 1964
 }
 
+for key, value in my_dict.items():
+    print(key, value)
+
 # To access a value in a dictionary, you use the key associated with that value:
 
 print(my_dict["brand"])  # Output: Ford

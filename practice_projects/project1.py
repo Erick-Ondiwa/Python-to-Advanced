@@ -3,7 +3,7 @@ import random
 
 def play_game():
     user_choice = None
-    choices = ["rock", "paper", "scissors"]
+    choices = ("rock", "paper", "scissors")
     computer = random.choice(choices)
     while user_choice not in choices:
         user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
