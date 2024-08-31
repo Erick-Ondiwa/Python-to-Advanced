@@ -7,24 +7,19 @@ def play_game():
     computer = random.choice(choices)
     while user_choice not in choices:
         user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
-
-        result = " "
         if user_choice == computer:
-            result = "You Tie!"
-        elif user_choice == "rock" and computer == "paper":  # 1
-            result = "You Lose!"
-        elif user_choice == "rock" and computer == "scissors":  # 2
-            result = "You Win!"
-        elif user_choice == "paper" and computer == "rock":  # 3
-            result = "You Win!"
-        elif user_choice == "paper" and computer == "scissors":  # 4
-            result = "You Lose!"
-        elif user_choice == "scissors" and computer == "Rock":  # 5
-            result = "You Win!"
-        elif user_choice == "scissors" and computer == "paper":
-            result = "You Lose!"
+            return "You Tie!"
+        elif ((user_choice == "rock" and computer == "paper" or
+              user_choice == "paper" and computer == "scissors") or
+              user_choice == "scissors" and computer == "paper"):  # 1
+            return "You Lose!"
+
+        elif ((user_choice == "rock" and computer == "scissors" or
+              user_choice == "paper" and computer == "rock") or
+              user_choice == "scissors" and computer == "Rock"):  # 2
+            return "You Win!"
+
         print("You: " + user_choice + ", " + "Computer:" + computer)
-        return result
 
 
 class Scores:
@@ -37,6 +32,8 @@ class Scores:
 def display_result():
     while Scores.attempts <= 2:
         Scores.attempts += 1
+        print()
+        print(f"**********ATTEMPT NO:{Scores.attempts}************")
         result = play_game()
         print(result)
 
