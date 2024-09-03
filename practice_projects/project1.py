@@ -29,45 +29,44 @@ class Scores:
     attempts = 0
 
 
-def display_result():
-    while Scores.attempts <= 2:
-        Scores.attempts += 1
-        print()
-        print(f"**********ATTEMPT NO:{Scores.attempts}************")
-        result = play_game()
-        print(result)
-
-        if result == "You Win!":
-            Scores.wins += 1
-        elif result == "You Lose!":
-            Scores.losses += 1
-        elif result == "You Tie!":
-            Scores.ties += 1
-        else:
-            print("This is an invalid result")
-        print("Wins: " + str(Scores.wins) + " Losses " + str(Scores.losses) + " Ties " + str(
-            Scores.ties))
-    print("You've reached a maximum of " + str(Scores.attempts) + " attempts")
-    play_again()
-
-    return Scores
-
-
-display_result()
-
-
 def play_again():
     user_response = input("Play again? yes/no: ").upper()
     while True:
         if user_response == "NO":
             print("Goodbyeee")
             break
-        else:
+        elif user_response == "YES":
+            play_game()
             display_result()
-# while play_again():
-#     display_result()
+        else:
+            print("This is an invalid choice")
 
 
-# while display_result():
-#     play_again()
-# print("Goodbyeeee!")
+def display_result():
+    is_playing = True
+    while is_playing:
+        while Scores.attempts <= 2:
+            Scores.attempts += 1
+            print()
+            print(f"**********ATTEMPT NO:{Scores.attempts}************")
+            result = play_game()
+            print(result)
+
+            if result == "You Win!":
+                Scores.wins += 1
+            elif result == "You Lose!":
+                Scores.losses += 1
+            elif result == "You Tie!":
+                Scores.ties += 1
+            else:
+                print("This is an invalid result")
+            print("Wins: " + str(Scores.wins) + " Losses " + str(Scores.losses) + " Ties " + str(
+                Scores.ties))
+        print("You've reached a maximum of " + str(Scores.attempts) + " attempts")
+        is_playing = False
+    play_again()
+    return Scores
+
+
+display_result()
+
