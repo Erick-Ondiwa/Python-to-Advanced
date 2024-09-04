@@ -6,7 +6,7 @@ def play_game():
     choices = ("rock", "paper", "scissors")
     computer = random.choice(choices)
     while user_choice not in choices:
-        user_choice = input("What's your choice,Rock, Paper or Scissors?: ").lower()
+        user_choice = input("What's your choice: Rock, Paper or Scissors?: ").lower()
         if user_choice == computer:
             return "You Tie!"
         elif ((user_choice == "rock" and computer == "paper" or

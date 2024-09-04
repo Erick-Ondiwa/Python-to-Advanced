@@ -13,6 +13,7 @@ options = [["A. Mercury ", "B. Mars ", "C. Jupiter ", "D. Earth "],
            ["A. Road ", "B. Air ", "C. Water ", "D. Pipeline "],
            ["A. 7 ", "B. 15 ", "C. 13 ", "D. 17 "]]
 
+correct_choices = 0
 
 for question in questions:
     print(question)
@@ -24,7 +25,7 @@ for question in questions:
     while user_choice not in choices:
         user_choice = input("Please select: A, B, C or D: ").upper()
     guesses.append(user_choice)
-    correct_choices = 0
+
     if user_choice == answers[questions_idx]:
         print("CORRECT")
         correct_choices += 1
@@ -35,4 +36,4 @@ for question in questions:
     questions_idx += 1
 
 score = (correct_choices / len(answers)) * 100
-print(f"Your score is:{score}")
+print(f"Your score is:{score}%")
