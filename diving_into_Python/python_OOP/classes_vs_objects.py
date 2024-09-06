@@ -4,7 +4,7 @@
 # functionalities
 # associated with the object
 
-# To create many objects, we need a class are also associated with classes
+# Objects are also associated with classes
 # The necessity of a class comes in especially where we have many objects.
 # Thus, an object is simply an instance of a class
 
@@ -35,8 +35,46 @@ class Car:
         self.color = color
         self.for_sale = for_sale
 
+    def drive(self):
+        print(f"You drive the {self.year},{self.color}, {self.model}")
+
+    def stop(self):
+        print(f"You drive the {self.year},{self.color}, {self.model}")
+
 
 car1 = Car("BMW", 2024, "Black", True)
-print(car1.model)
+car2 = Car("Corvette", 2025, "White", False)
+car1.drive()
+car2.stop()
+
+# Since classes usually take up alot of space, it is advisable to put the classes in a separate
+# python file. The separate python file is then imported as a module.
+
+# Class attributes
+# These are attributes created within the class but outside the constructor. These attributes are
+# common to all the abjects of the class. As a good practice, the class attribute should be
+# accessed via the class name rather than the object instances
+
+
+class Student:
+    department = "Computer Science"
+
+    def __init__(self, name, reg_no, course):
+        self.name = name
+        self.reg_no = reg_no
+        self.course = course
+
+    def stu_details(self):
+        print(f"My name is {self.name} of registration no {self.reg_no}.")
+        print(f"I am from the department of {Student.department}, taking {self.course} as a "
+              f"course.")
+
+
+student1 = Student("Erick Ondiwa", "CCS/00072/021", "Computer Science")
+student1.stu_details()
+print(student1.name)
+print(Student.department)
+
+
 
 
