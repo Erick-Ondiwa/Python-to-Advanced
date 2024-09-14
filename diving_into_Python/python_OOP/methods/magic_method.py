@@ -12,7 +12,20 @@ class Book:
     def __str__(self):
         return f"{self.title} by {self.author}"
 
+# This method is used to check for equality between two or more objects
+    def __eq__(self, other):
+        return self.title == other.title and self.author == other.author
+
 
 book1 = Book(title="A Doll's House", author="Henrik Ibsen", no_of_pages=176)
-print(book1)
+book2 = Book(title="Blossoms of the Savanna", author="H.R Olekulet", no_of_pages=390)
+book3 = Book(title="The River and the Source", author="Erick Kondiwa", no_of_pages=402)
+book4 = Book(title="The Pearl", author="Martin Luther", no_of_pages=210)
+book5 = Book(title="The River Between", author="S.K Erick", no_of_pages=256)
+
+books = [book1, book2, book3, book4, book5]
+print(book1 == book2)
+for book in books:
+    print(book)
+
 
