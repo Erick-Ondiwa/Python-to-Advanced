@@ -1,7 +1,7 @@
 # Importing the os module which contains the path submodule
 import os
 import os.path
-file_path = "C:\\Users\\Erick Ondiwa'z\\Desktop\\practice.txt"
+file_path = "C:/Users/Erick Ondiwa'z/Desktop/practice.txt"
 print(file_path)
 
 # The .exists() method returns true if the specified file path exists
@@ -11,7 +11,8 @@ if os.path.exists(file_path):
     if os.path.isfile(file_path):
         print("This is a file")
 
-        # The .isdir() method returns true if the specified file is a directory otherwise it returns false
+        # The .isdir() method returns true if the specified file is a directory otherwise it 
+        # returns false
     elif os.path.isdir(file_path):
         print("It is a directory")
 else:
