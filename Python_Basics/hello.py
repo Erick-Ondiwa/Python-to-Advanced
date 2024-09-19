@@ -1,24 +1,25 @@
 # Printing 'hello world' in Python
 
-print("Hello World")
-
-name = "Erick Ondiwaz"
-print("Hello "+name)
-
+from datetime import date
+from datetime import datetime
 names = ["Erick Ondiwa", "James Wasonga", "Felix Awere", "Shadrack Mutinda", "Mark Emmanuel"]
 
 year_of_births = [2000, 2001, 2002, 2003, 2004]
 
-# for year_of_birth in year_of_births:
-#     print(year_of_birth)
-
 name_idx = 0
+# current_year = date.today()
 
 for name in names:
-    years = year_of_births[name_idx]
-    print(f"{name}:{years}")
+    person_year = year_of_births[name_idx]
+    current_year = datetime.now().year
+
+    age = current_year - person_year
+    # yob_idx = 0
+    print(f"{name} you are:{age} years old.")
 
     name_idx += 1
+
+
 
 
 
