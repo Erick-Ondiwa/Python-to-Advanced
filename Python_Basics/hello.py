@@ -33,8 +33,8 @@ for student_height in student_heights:
 average_sum = sum_height / len(student_heights)
 average_sum = round(average_sum, 2)
 
-# print(f"The sum total of heights is: {sum_height}.")
-# print(f"The average height for all the students is:{average_sum}.")
+print(f"The sum total of heights is: {sum_height}.")
+print(f"The average height for all the students is:{average_sum}.")
 
 
 sum_nums = 0
