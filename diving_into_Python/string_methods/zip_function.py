@@ -19,7 +19,8 @@ list1 = [1, 2, 3]
 list2 = ['a', 'b', 'c']
 
 result = zip(list1, list2)
-print(list(result))  # Converting the zip object to a list to see the result
+print(result)  # this will print the memory address of the result
+# print(list(result))  # Converting the zip object to a list to see the result
 
 # Output:
 output1 = [(1, 'a'), (2, 'b'), (3, 'c')]
@@ -32,7 +33,7 @@ letters = ['a', 'b', 'c']
 symbols = ['!', '@', '#']
 
 result = zip(numbers, letters, symbols)
-print(list(result))
+# print(list(result))
 # Output:
 output2 = [(1, 'a', '!'), (2, 'b', '@'), (3, 'c', '#')]
 # In this case, each tuple contains one element from each iterable (numbers, letters, and symbols).
@@ -45,7 +46,7 @@ numbers = [1, 2, 3, 4]
 letters = ['a', 'b']
 
 result = zip(numbers, letters)
-print(list(result))
+# # print(list(result))
 
 # Output:
 output3 = [(1, 'a'), (2, 'b')]
@@ -57,8 +58,8 @@ output3 = [(1, 'a'), (2, 'b')]
 
 zipped = [(1, 'a'), (2, 'b'), (3, 'c')]
 numbers, letters = zip(*zipped)
-print(numbers)
-print(letters)
+# print(numbers)
+# print(letters)
 
 # Output:
 output4a = (1, 2, 3)
@@ -73,7 +74,7 @@ str1 = "ABC"
 str2 = "123"
 
 result = zip(str1, str2)
-print(list(result))
+# print(list(result))
 
 # Output:
 output5 = [('A', '1'), ('B', '2'), ('C', '3')]
@@ -121,7 +122,7 @@ list3 = [7, 8, 9]
 
 # Use zip to pair corresponding elements
 summed = [a + b + c for a, b, c in zip(list1, list2, list3)]
-print(summed)
+# print(summed)
 
 # Here, each element in the resulting list is the sum of the corresponding elements from list1,
 # list2, and list3.
@@ -149,7 +150,7 @@ list2 = ['a', 'b', 'c']
 
 # Zipping using zip_longest with a fill value
 result = zip_longest(list1, list2, fillvalue='empty')
-print(list(result))
+# print(list(result))
 
 # In this case, the shorter list (list1) was filled with 'empty' for the missing element.
 
@@ -166,7 +167,7 @@ odds = numbers[1::2]  # Elements at odd indices
 
 # Pair the even and odd indexed elements
 paired = list(zip(evens, odds))
-print(paired)
+# print(paired)
 
 # 5. Sorting Using zip()
 # You can use zip() to sort one list based on another. For example, if you have a list of names
@@ -197,7 +198,7 @@ matrix = [
 
 # Transpose the matrix using zip
 transposed = list(zip(*matrix))
-print(transposed)
+# print(transposed)
 
 # Here, the rows of the original matrix are turned into columns using zip(*matrix).
 
@@ -209,7 +210,7 @@ values = ['Alice', 25, 'New York']
 
 # Create a dictionary from two lists
 merged_dict = dict(zip(keys, values))
-print(merged_dict)
+# print(merged_dict)
 
 # 8. Iterating Over Multiple Sequences Simultaneously
 # When you have multiple lists of related data (e.g., names, ages, and cities), you can iterate
