@@ -61,3 +61,7 @@ average_age = sum_ages / len(ages)
 average_age = round(average_age, 2)
 
 print(f"The average age for the {person_idx} people is: {average_age}")
+
+nums = [1, 1, 2, 2, 5, 5, 5, 6, 7, 7, 3]
+for num in nums:
+    count_of_num = num

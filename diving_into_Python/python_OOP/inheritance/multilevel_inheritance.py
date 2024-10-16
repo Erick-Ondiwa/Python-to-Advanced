@@ -46,11 +46,19 @@ class Shapes:
         self.color = color
         self.is_filled = is_filled
 
+    def describe(self):
+        print(f"It is {self.color} and {'filled' if self.is_filled else 'not filled'}")
+
 
 class Circle(Shapes):
     def __init__(self, color, is_filled, radius):
         super().__init__(color, is_filled)
         self.radius = radius
+
+    def describe(self):
+        super().describe()
+        area = pow(self.radius, 2)
+        print(f"It is a circle with an area of:{area}")
 
 
 class Square(Shapes):
@@ -58,8 +66,10 @@ class Square(Shapes):
         super().__init__(color, is_filled)
         self.width = width
 
-    def area(self):
-        return pow(self.width, 2)
+    def describe(self):
+        super().describe()
+        area = pow(self.width, 2)
+        print(f"It is a square with an area of:{area}")
 
 
 class Triangle(Shapes):
@@ -68,13 +78,17 @@ class Triangle(Shapes):
         self.width = width
         self.height = height
 
-    def area(self):
-        return self.width * self.height * 0.5
+    def describe(self):
+        super().describe()
+        area = self.width * self.height * 0.5
+        print(f"It is a triangle with an area of:{area}")
 
 
 circle = Circle(color="red", is_filled=True, radius=5)
 square = Square(color="White", is_filled=True, width=25)
 triangle = Triangle(color="blue", is_filled=True, width=10, height=20)
 
-print(f"{square.area()}cm^2")
-print(f"{triangle.area()}cm^2")
+triangle.describe()
+circle.describe()
+square.describe()
+

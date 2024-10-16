@@ -1,8 +1,7 @@
 # An object represent any real world thing
 # Objects are often characterised by their properties(attributes) and methods(functions)
 # The object's attributes describes the features that the object can have while methods are the
-# functionalities
-# associated with the object
+# functionalities associated with the object
 
 # Objects are also associated with classes
 # The necessity of a class comes in especially where we have many objects.
@@ -23,7 +22,7 @@ class Person:
 person1 = Person("Erick", 21, "Male")
 first_name = person1.name
 my_age = person1.age
-gender1 = person1.name
+gender1 = person1.gender
 interest = person1.person_interest("dog")
 print(interest)
 
@@ -50,7 +49,7 @@ car2.stop()
 # Since classes usually take up alot of space, it is advisable to put the classes in a separate
 # python file. The separate python file is then imported as a module.
 
-# Class attributes
+# ***************** CLASS ATTRIBUTES ************************
 # These are attributes created within the class but outside the constructor. These attributes are
 # common to all the abjects of the class. As a good practice, the class attribute should be
 # accessed via the class name rather than the object instances

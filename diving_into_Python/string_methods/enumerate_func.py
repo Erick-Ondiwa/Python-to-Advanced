@@ -2,6 +2,7 @@
 # iterable (such as a list, tuple, or string) while also keeping track of the current index (
 # position) in the iterable. It essentially adds a counter to an iterable and returns it as an
 # enumerate object, which can be used to iterate over both the index and the value at the same time.
+from numpy import concat
 from numpy._core.defchararray import lower
 from numpy._core.strings import upper
 
@@ -157,7 +158,6 @@ stu_names = ["Erick Ondiwa", "James Wasonga", "Felix Awere", "Shadrack Mutinda",
 for idx, stu_name in enumerate(stu_names, start=1):
     print(f"{idx}. {stu_name}")
 
-
 # #2 You are given a list of numbers. Write a program that increments every number located at an
 # even index by 2.
 
@@ -177,14 +177,12 @@ for voc_idx, vocabulary in enumerate(vocabularies):
     if voc_idx % 2 != 0:
         print(f"{voc_idx}. {vocabulary}")
 
-
 # #4You are given a list of cities. Create a dictionary where the keys are the indices of the
 # cities (starting from 1) and the values are the city names.
 
 kenya_cities = ["Nairobi", "Kisumu", "Mombasa", "Nakuru", "Migori"]
 for city_idx, kenya_city in enumerate(kenya_cities):
     print(f"{city_idx}. {kenya_city}")
-
 
 # #5 Given a 2D list (matrix), write a program that prints the index of each element in the matrix
 # along with its value.
@@ -199,7 +197,6 @@ for int_idx, list_of_int in enumerate(list_of_ints):
     for int_index, ints in enumerate(list_of_int):
         print(f"Row {int_idx} Column {int_idx}: {ints}")
 
-
 # #6 You are given a list of temperatures recorded over a week. If the temperature is found to be
 # less than 10°C, increase it by 5°C. Use the index to check which temperatures should be adjusted.
 
@@ -209,7 +206,6 @@ for temp_idx, weekly_temp in enumerate(weekly_temps):
     if weekly_temps[temp_idx] < 10:
         weekly_temp += 5
     print(f"{temp_idx}. {weekly_temp}")
-
 
 # #7 You are given a string of lowercase letters. Write a program to capitalize every letter
 # located at an odd index.
@@ -230,7 +226,6 @@ for letter_index, every_letter in enumerate(erick_description):
         print(every_letter, end="")
     print(every_letter, end="")
 
-
 # #8 You have a list of tuples containing movie names and their release years. Write a program to
 # print each movie's name along with its release year and its index in the list, starting from 1.
 
@@ -239,3 +234,12 @@ movie_details = [("Inception", 2010), ("The Matrix", 1999), ("Interstellar", 201
 for movie_idx, movie_detail in enumerate(movie_details):
     print(movie_detail)
 
+
+class Rocket:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+
+rocket1 = Rocket(3, 4)
+print(rocket1.x)
