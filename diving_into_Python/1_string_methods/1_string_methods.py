@@ -5,6 +5,7 @@ last_name = "Ondiwa"
 
 full_name = first_name.capitalize() + "@" + middle_name + "@" + last_name
 print(full_name)
+# len(): This method returns the length or the number of chars in a specified string
 # capitalize(): This method capitalizes the first letter of every word in the string
 print(first_name.capitalize())
 
@@ -13,7 +14,10 @@ print(first_name.upper())
 
 # lower(): This method changes all the letters in a string to lowercase
 print(last_name.lower())
-# find(): This method returns the index of a specified letter or substring within a string
+# find(): This method returns the index of first occurrence of a specified letter or substring
+# within a string
+# rfind(): This method returns the index of last occurrence of a specified letter or substring
+# within a string
 print(full_name.find(" "))
 
 # replace(): This method replaces a character with another character or a string with another
@@ -45,8 +49,10 @@ print(new_name.swapcase())
 print(new_name.casefold())
 
 # center():
-# isdigit():
-# isalpha():
+# strip()
+# isdigit(): # Returns True if a variable is a digit, else false
+# isalpha(): Returns True if a variable contains only alphabetical chars excluding space,
+# else false
 # isalnum():
 
 

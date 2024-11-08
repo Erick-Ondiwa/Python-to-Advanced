@@ -1,4 +1,4 @@
-# A. Decision Making
+# A. Decision-Making
 # 1. if...and elseif statements
 age: int = int(input("Enter Your age:"))
 if not (age, int):

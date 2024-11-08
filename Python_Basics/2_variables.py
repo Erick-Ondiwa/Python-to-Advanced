@@ -1,4 +1,4 @@
-# Basic Variable Assignment
+#       A.Defining and Assigning Values to Variables
 # 1.Integer data types
 length = 12
 width = 8
@@ -17,8 +17,17 @@ full_name = first_name + " " + last_name
 print("I am "+full_name)
 print(len(last_name))
 
+# Formatted Strings
+my_name = "Erick Kondiwa"
+my_age = 24
+print(f"My name is {my_name}. I am {my_age} years old")
+
 # 3. Boolean data types
-isMale = False
+isOnline = True
+if isOnline:
+    print("You are online")
+else:
+    print("You are offline")
 
 # Type Hinting= This means defining a variable by statically stating its type
 name: str = "Erick"
