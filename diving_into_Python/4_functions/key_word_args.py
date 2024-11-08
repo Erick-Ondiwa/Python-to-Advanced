@@ -26,7 +26,7 @@ name_age(age=30, name="Alice")
 # Benefits of Keyword Arguments
 
 # The primary advantage of using keyword arguments is the reduction of errors related to argument
-# order. This is particularly useful when dealing with functions that have many parameters or
+# order. This is particularly useful when dealing with 4_functions that have many parameters or
 # when the order of parameters is not intuitive. By specifying arguments by name, you ensure that
 # each value is assigned to the correct parameter, leading to more readable and maintainable code.
 

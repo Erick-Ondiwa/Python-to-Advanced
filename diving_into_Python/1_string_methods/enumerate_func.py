@@ -144,7 +144,7 @@ for i, item in enumerate(items):
 # of the index.
 # It is useful when you need both the index and the element in loops, especially when modifying
 # data or creating new collections based on indices.
-# You can combine enumerate() with other functions like zip() or dict.items() to achieve more
+# You can combine enumerate() with other 4_functions like zip() or dict.items() to achieve more
 # complex iteration tasks.
 # The start parameter gives you control over where to begin the index, providing flexibility when
 # working with enumerations.

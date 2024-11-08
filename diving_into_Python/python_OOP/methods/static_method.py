@@ -3,7 +3,7 @@
 # A static method is different from either the instance or class methods since it does not take
 # any default parameter.
 # They are also bound to the class, not the object, and cannot access or modify the class state
-# They are used to create utility functions that perform a task in isolation.
+# They are used to create utility 4_functions that perform a task in isolation.
 # Static methods are defined using the @staticmethod decorator.
 
 class Employee:

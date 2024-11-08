@@ -1,6 +1,6 @@
 # Understanding *args and **kwargs in Python
 
-# In Python, *args and **kwargs are special keyword parameters that allow functions to accept an
+# In Python, *args and **kwargs are special keyword parameters that allow 4_functions to accept an
 # arbitrary number of arguments and keyword arguments respectively. They are used to create more
 # flexible code that can handle a varying amount of input values without having to define a
 # function for each case.
@@ -60,7 +60,7 @@ greet(**user_info) # Unpacks the dictionary and passes as keyword arguments
 # arguments to be passed to the original function are not known in advance. They also help in
 # creating APIs that are flexible and can handle a variety of input formats.
 
-# In conclusion, *args and **kwargs are powerful tools for creating flexible functions that can
+# In conclusion, *args and **kwargs are powerful tools for creating flexible 4_functions that can
 # handle different amounts of arguments and keyword arguments. They are widely used in Python and
 # understanding them can greatly enhance your ability to write effective and efficient code
 

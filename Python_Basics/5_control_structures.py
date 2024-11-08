@@ -20,6 +20,20 @@ while len(name) == 0:
     name = input("Enter your name")
 print("Your name is " + name)
 
+# Example 2
+fav_food = input("Enter the food you like (q to quit): ")
+while not fav_food == "q":
+    print(f"You like {fav_food}")
+    fav_food = input("Enter another food you like (q to quit): ")
+print("Goodbye")
+
+# Example 3
+num = int(input("Enter a number between 1 and 10: "))
+while num < 1 or num > 10:
+    print(f" {num} is not valid")
+    num = input("Enter a number between 1 and 10: ")
+print(f"Your number is {num}")
+
 # 2.for...loop
 for seconds in range(50, 0, -2):
     print(seconds)
