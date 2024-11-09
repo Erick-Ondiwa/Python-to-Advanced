@@ -1,7 +1,7 @@
 # Typecasting
 
 # This is the process of converting a variable from one data type to another
-# The typecasting 4_functions include:
+# The typecasting 3_functions include:
 
 # int() float() str() bool()
 

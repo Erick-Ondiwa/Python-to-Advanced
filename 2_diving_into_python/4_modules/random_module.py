@@ -1,4 +1,4 @@
-# The random module in Python provides a suite of 4_functions for generating random numbers,
+# The random module in Python provides a suite of 3_functions for generating random numbers,
 # selecting random items, and performing various randomization tasks. It’s especially useful in
 # applications that require random outcomes, such as games, simulations, and testing scenarios.
 
@@ -47,7 +47,7 @@ random.shuffle(deck)
 print(deck)  # Output: [3, 1, 5, 2, 4], etc.
 
 #                  5. Random Distributions
-# The random module provides 4_functions to sample from common probability distributions:
+# The random module provides 3_functions to sample from common probability distributions:
 
 # betavariate(alpha, beta): Returns a random float from a Beta distribution.
 # expovariate(lambd): Returns a random float from an Exponential distribution.

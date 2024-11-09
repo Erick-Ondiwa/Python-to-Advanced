@@ -1,6 +1,6 @@
 # Inheritance becomes handy especially when we have many related classes
 # Inheritance is a fundamental concept in oop that allows a class (Child class or subclass) to
-# take up both the properties(attributes) and methods(4_functions) from another class the
+# take up both the properties(attributes) and methods(3_functions) from another class the
 # superclass or parent class.
 
 # There are three basic types of inheritance: Single inheritance: This is when a child class

@@ -1,5 +1,5 @@
 # An object represent any real world thing
-# Objects are often characterised by their properties(attributes) and methods(4_functions)
+# Objects are often characterised by their properties(attributes) and methods(3_functions)
 # The object's attributes describes the features that the object can have while methods are the
 # functionalities associated with the object
 
