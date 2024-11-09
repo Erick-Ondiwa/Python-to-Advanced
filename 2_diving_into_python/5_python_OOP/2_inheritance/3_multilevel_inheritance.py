@@ -1,4 +1,4 @@
-# Multilevel inheritance: This is when a child class inherits from a parent which also inherits
+# Multilevel 2_inheritance: This is when a child class inherits from a parent which also inherits
 # from another parent
 
 class Animal:
