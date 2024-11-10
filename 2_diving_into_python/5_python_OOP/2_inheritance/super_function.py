@@ -12,6 +12,7 @@ class Employee:
         # Base pay calculation for a regular employee
         return self.salary
 
+
 class Manager(Employee):
     def __init__(self, name, salary, bonus):
         # Initialize the parent class with the name and salary attributes
@@ -23,9 +24,20 @@ class Manager(Employee):
         base_pay = super().calculate_pay()
         return base_pay + self.bonus
 
+
 # Example usage:
 employee = Employee("Alice", 50000)
 manager = Manager("Bob", 70000, 15000)
 
 print(f"Employee Pay: {employee.calculate_pay()}")  # Output: 50000
-print(f"Manager Pay: {manager.calculate_pay()}")    # Output: 85000
+print(f"Manager Pay: {manager.calculate_pay()}")  # Output: 85000
+
+# Explanation of super() in This Context
+# In the __init__ method of Manager:
+# The super().__init__(name, salary) call is used to initialize name and salary attributes from
+# the Employee class. This eliminates the need to directly call Employee.__init__(self, name,
+# salary), making the code more maintainable.
+# In the calculate_pay method of Manager:
+# The super().calculate_pay() call invokes the calculate_pay method of the Employee class to get
+# the base salary. This is then combined with the bonus specific to managers, allowing for an
+# overridden version that incorporates the additional behavior.
