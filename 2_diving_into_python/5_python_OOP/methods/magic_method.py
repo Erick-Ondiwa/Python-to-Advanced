@@ -49,5 +49,7 @@ for book in books:
 print(book1 == book2)
 print(book1 < book2)
 print(book1 + book2)
+print('River' in book3)
+
 
 
