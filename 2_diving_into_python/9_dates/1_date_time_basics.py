@@ -6,14 +6,20 @@
 # You can use datetime.datetime to create date and time objects in Python.
 
 import datetime
-
-# Get the current date and time
-current_datetime = datetime.datetime.now()
-print("Current date and time:", current_datetime)
+# import pygame
+# from datetime import datetime
 
 # To get Today's date:
 today = datetime.date(2025, 1, 2).today()
 print(today)
 
-current_time = datetime.datetime.now().strftime('%H:%M:%S- %D')
+# Get the current date and time
+current_datetime = datetime.datetime.now()
+print("Current date and time:", current_datetime)
+
+current_time = datetime.datetime.now().strftime('%H:%M:%S')
 print(current_time)
+
+# ##### CHECK THE pygame module
+# Creating an alarm clock
+# For sound effects in an alarm, import the pygame module
