@@ -6,7 +6,7 @@
 # You can use datetime.datetime to create date and time objects in Python.
 
 import datetime
-# import pygame
+import pygame
 # from datetime import datetime
 
 # To get Today's date:
