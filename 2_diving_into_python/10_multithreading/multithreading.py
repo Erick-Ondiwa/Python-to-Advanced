@@ -20,7 +20,10 @@ def compute_perimeter(length, width):
 
 
 task1 = threading.Thread(target=compute_area, args=(10, 6))
+task1.start()
 task2 = threading.Thread(target=compute_perimeter, args=(10, 6))
+task2.start()
+
 print(f"The area is {task1}")
 print(f"The perimeter is {task2}")
 
@@ -32,24 +35,24 @@ urls = ["http://example.com/page1", "http://example.com/page2", ..., "http://exa
 
 
 # Function to fetch content from a single URL
-def fetch_url(url):
-    try:
-        response = requests.get(url)
-        print(f"Fetched {url} with status: {response.status_code}")
-    except requests.RequestException as e:
-        print(f"Error fetching {url}: {e}")
-
-
-# Create threads for each URL
-threads = []
-for url in urls:
-    thread = threading.Thread(target=fetch_url, args=(url,))
-    threads.append(thread)
-    thread.start()
-
-# Wait for all threads to complete
-for thread in threads:
-    thread.join()
-
-print("Finished fetching all URLs")
+# def fetch_url(url):
+#     try:
+#         response = requests.get(url)
+#         print(f"Fetched {url} with status: {response.status_code}")
+#     except requests.RequestException as e:
+#         print(f"Error fetching {url}: {e}")
+#
+#
+# # Create threads for each URL
+# threads = []
+# for url in urls:
+#     thread = threading.Thread(target=fetch_url, args=(url,))
+#     threads.append(thread)
+#     thread.start()
+#
+# # Wait for all threads to complete
+# for thread in threads:
+#     thread.join()
+#
+# print("Finished fetching all URLs")
 
