@@ -11,21 +11,25 @@ import time
 
 def compute_area(length, width):
     time.sleep(4)
-    return length * width
+    area = length * width
+    print(f"Area = {area}")
 
 
 def compute_perimeter(length, width):
     time.sleep(2)
-    return 2 * (length + width)
+    perimeter = 2 * (length + width)
+    print(f"Perimeter = {perimeter}")
 
 
 task1 = threading.Thread(target=compute_area, args=(10, 6))
 task1.start()
+task1.join()
 task2 = threading.Thread(target=compute_perimeter, args=(10, 6))
 task2.start()
+task2.join()
 
-print(f"The area is {task1}")
-print(f"The perimeter is {task2}")
+print("All tasks completed")
+
 
 # ###### CASE 2 #####
 
