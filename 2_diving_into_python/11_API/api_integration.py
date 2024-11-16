@@ -1,17 +1,19 @@
 import requests
-import requests
 
 # API base URL and endpoint
-API_KEY = "your_api_key_here"  # Replace with your OpenWeatherMap API key
+api_key = "649597c47fd13799b12cd57e0046f0d8"  # Replace with your OpenWeatherMap API key
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 # City for which you want the weather
 city = "Nairobi"
 
+# Check also on this syntax:
+api_url = f"https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}"
+
 # Request parameters
 params = {
     "q": city,
-    "appid": API_KEY,
+    "appid": api_key,
     "units": "metric"  # Temperature in Celsius
 }
 
