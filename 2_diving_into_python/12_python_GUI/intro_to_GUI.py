@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtGui import QIcon, QFont, QPixmap
 from PyQt5.QtCore import Qt  # This class is used for alignments
 
 
@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         label1.setFont(QFont("Roboto", 30))
         label1.setStyleSheet("color: blue;"
                              "background-color: #6fdcf7;"
-                             "text-decoration: underline")  # You can use RGB or HEX values
+                             "text-decoration: underline;")  # You can use RGB or HEX values
 
         # Setting Alignments
         # label1.setAlignment(Qt.AlignTop)  # Vertically aligns text to the top
@@ -27,13 +27,21 @@ class MainWindow(QMainWindow):
         # label1.setAlignment(Qt.AlignRight)  # horizontally aligns text to the right
         # label1.setAlignment(Qt.AlignHCenter)  # horizontally aligns text to the center
         # label1.setAlignment(Qt.AlignLeft)  # horizontally aligns text to the left
-        #
+
         # label1.setAlignment(Qt.AlignHCenter | Qt.AlignTop)  # horizontally aligns text to the
         # # center
         # label1.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)  # horizontally and vertically
         # aligns text to the center
         label1.setAlignment(Qt.AlignCenter)  # horizontally and vertically aligns text to the center
 
+        # Adding an Image to a GUI
+        image_label = QLabel(self) # Creating an empty label
+        image_label.setGeometry(0, 0, 250, 250)
+
+        img = QPixmap("file_path")
+        image_label.setPixmap(img)  # Adding the image to the label
+
+        image_label.setScaledContents(True)  # This enables the image to fit into the label size
 
 
 def main():
