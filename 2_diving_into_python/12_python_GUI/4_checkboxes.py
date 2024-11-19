@@ -19,11 +19,12 @@ class MainWindow(QMainWindow):
         self.male.setChecked(False)
         self.male.stateChanged.connect(self.checkbox)
         self.label.setGeometry(50, 80, 200, 50)
-        # self.label.setText(" ")
 
     def checkbox(self, state):
-        return "male" if state == Qt.Checked else "female"
-
+        if state == Qt.Checked:
+            self.label.setText("Male")
+        else:
+            self.label.setText("Female")
 
 
 def main():
