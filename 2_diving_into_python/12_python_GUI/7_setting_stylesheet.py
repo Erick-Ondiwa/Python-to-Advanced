@@ -52,15 +52,16 @@ class MainWindow(QMainWindow):
             QPushButton#save_button:hover{
                 background-color:blue;
             }
-        
-        
         """)
+
 
 def main():
     application = QApplication(sys.argv)
     window = MainWindow()
 
     window.show()
+    # application.exec_() # Not ideal for production-level code, as it might leave the program in
+    #                        an undefined state after the event loop ends
     sys.exit(application.exec_())
 
 

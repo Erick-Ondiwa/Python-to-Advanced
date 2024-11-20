@@ -49,7 +49,9 @@ def main():
     window = MainWindow()
 
     window.show()
-    sys.exit(app.exec_())
+    # app.exec_() # Not ideal for production-level code, as it might leave the program in an
+    #                 undefined state after the event loop ends.
+    sys.exit(app.exec_())  # Passes exit code to the OS for clean termination.
 
 
 if __name__ == "__main__":
